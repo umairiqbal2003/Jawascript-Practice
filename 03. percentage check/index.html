@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1>Grade check</h1>
+
+     <form onsubmit="checkGrade();return false">
+        <label for="percentage">Percentage :</label>
+        <input type="number" required id="percentage" >
+
+        <br>
+        <br>
+
+        <button type="submit">Check</button>
+     </form>
+
+     <h1 id="result"></h1>
+
+
+ <script>
+    
+    function checkGrade(){
+
+        let percentage = document.querySelector("#percentage").value
+
+        if(percentage >= 80 && percentage <=100 ){
+            document.querySelector("#result").innerHTML = "A-1 Grade"
+        }
+        else if(percentage >= 70 && percentage < 79){
+            document.querySelector("#result").innerHTML = "A Grade"
+        }
+        
+        else if(percentage >= 60 && percentage < 69){
+            document.querySelector("#result").innerHTML = "B Grade"
+        }
+        else if(percentage >=50 && percentage < 59){
+            document.querySelector("#result").innerHTML = "C Grade"
+        }
+        
+        else if(percentage >=40 && percentage < 49){
+            document.querySelector("#result").innerHTML = "D Grade"
+        }
+        
+        else if(percentage < 40){
+            document.querySelector("#result").innerHTML = "You are fail"
+        }
+       
+        else{
+            document.querySelector("#result").innerHTML = "Enter correct percentage"
+        }
+         
+    }
+
+
+ </script>    
+
+    
+</body>
+</html>

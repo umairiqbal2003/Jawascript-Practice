@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Table Check</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1> <q> <i> Table Check </i> </q> </h1>
+
+    <div class="container">
+        <form onsubmit="tableCheck(); return false">
+            <label for="table"></label>
+            <input type="number" id="table" required placeholder="Enter your number">
+            <br>
+            <br>
+            <button type="submit" id="buttton">Check</button>
+        </form>
+    </div>
+
+
+    <p id="result" class="bottom">
+
+    </p>
+
+    <script>
+        function tableCheck() {
+            let table = +document.querySelector("#table").value;
+            document.querySelector("#result").innerHTML = "";
+            for (i = 1; i <= 10; i++) {
+                let result = table + " x  " + i + " = " + table * i + "</br>"
+
+                document.querySelector("#result").innerHTML += result;
+
+
+
+
+            }
+        }
+    </script>
+
+</body>
+
+</html>
